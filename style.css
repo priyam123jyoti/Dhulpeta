@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ==========================================================================
    1. BASE STYLES & RESET
    ========================================================================== */
@@ -19,6 +18,8 @@ html {
 
 body {
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif; /* Blended from section 2 global fallbacks */
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -323,47 +324,7 @@ footer {
 }
 
 /* ==========================================================================
-   7. RESPONSIVE MEDIA QUERIES (Mobile Adjustments)
-   ========================================================================== */
-@media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .village-card-layout {
-        flex-direction: column;
-        padding: 20px;
-        gap: 25px;
-    }
-    
-    .village-img-placeholder img {
-        height: 220px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-}
-
-
-/* ==========================================================================
-   8. MOANA AI PREMIUM CARD STYLES
+   7. MOANA AI PREMIUM CARD STYLES
    ========================================================================== */
 .moana-ad-container {
     padding-top: 40px;
@@ -548,60 +509,9 @@ footer {
     font-weight: 500 !important;
 }
 
-/* Responsive Scaling for Tablets and Mobile Phones */
-@media (max-width: 992px) {
-    .moana-content-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .moana-visual-side {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .moana-card {
-        padding: 60px 20px 30px 20px;
-    }
-    
-    .moana-badge {
-        left: 20px;
-    }
-    
-    .moana-info h2 {
-        font-size: 2rem;
-    }
-    
-    .moana-tagline {
-        font-size: 1.05rem;
-        margin-bottom: 25px;
-    }
-    
-    .btn-moana {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
 /* ==========================================================================
-   1. GLOBAL STYLES & RESET (If not already present in your main CSS)
+   8. CONTACT INTERACTIVE LAYOUT
    ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fcfdfc;
-    color: #222222;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
 .contact-container {
     width: 100%;
     max-width: 1200px;
@@ -610,7 +520,6 @@ body {
     padding-right: 20px;
 }
 
-/* Header spacing framing the layout neatly */
 .contact-header {
     padding: 30px 0;
     border-bottom: 1px solid #eaeaea;
@@ -643,9 +552,6 @@ body {
     color: #164d1f;
 }
 
-/* ==========================================================================
-   2. INTERACTIVE CONTACT LAYOUT
-   ========================================================================== */
 .contact-section {
     padding-top: 20px;
     padding-bottom: 80px;
@@ -658,7 +564,6 @@ body {
     align-items: start;
 }
 
-/* Left side typography & style */
 .section-badge {
     display: inline-block;
     color: #164d1f;
@@ -684,7 +589,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Contact information list items */
 .contact-details {
     display: flex;
     flex-direction: column;
@@ -727,7 +631,6 @@ body {
     color: #164d1f;
 }
 
-/* Right side form elements card */
 .contact-form-side {
     background: #ffffff;
     padding: 40px;
@@ -766,7 +669,6 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Focus input glow ring */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -775,7 +677,6 @@ body {
     box-shadow: 0 0 0 4px rgba(22, 77, 31, 0.1);
 }
 
-/* Form submission button */
 .btn-submit {
     background-color: #164d1f;
     color: #ffffff;
@@ -797,9 +698,18 @@ body {
 }
 
 /* ==========================================================================
-   3. MOBILE RESPONSIVE MEDIA QUERIES
+   9. RESPONSIVE MEDIA QUERIES (Unified Mobile Adjustments)
    ========================================================================== */
 @media (max-width: 992px) {
+    .moana-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .moana-visual-side {
+        width: 100%;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -814,333 +724,6 @@ body {
     }
 }
 
-=======
-/* ==========================================================================
-   1. BASE STYLES & RESET
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    /* System fonts load in 0 milliseconds and prevent font-flicker on mobile */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    color: #2c3e50;
-    background-color: #fcfdfc;
-    line-height: 1.6;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.2s ease;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-/* ==========================================================================
-   2. NAVIGATION HEADER
-   ========================================================================== */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header nav {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo a {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #1b5e20; /* Deep nature green */
-    letter-spacing: -0.5px;
-}
-
-header ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-header ul a {
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: #5a6c7d;
-    padding: 5px 0;
-    position: relative;
-}
-
-header ul a:hover, 
-header ul a.active {
-    color: #1b5e20;
-}
-
-/* Underline indicator for active page */
-header ul a.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #1b5e20;
-}
-
-/* ==========================================================================
-   3. HERO SECTION (60% Personal / 40% Village Blend)
-   ========================================================================== */
-.hero {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: #0b2d12;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    color: #3b5141;
-    margin-bottom: 35px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Buttons styles */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-}
-
-.btn-primary {
-    background-color: #1b5e20;
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background-color: #0b2d12;
-    transform: translateY(-1px);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #1b5e20;
-    border: 2px solid #1b5e20;
-}
-
-.btn-secondary:hover {
-    background-color: #1b5e20;
-    color: #ffffff;
-    transform: translateY(-1px);
-}
-
-/* ==========================================================================
-   4. CONTENT LAYOUTS
-   ========================================================================== */
-.subtitle {
-    display: block;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: #1b5e20;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
-}
-
-.section-title-wrap h2,
-.village-text h2 {
-    font-size: 2.2rem;
-    color: #0b2d12;
-    margin-bottom: 20px;
-}
-
-/* Intro text styling */
-.intro-section p {
-    font-size: 1.15rem;
-    color: #4a5568;
-    max-width: 900px;
-}
-
-/* 40% Village Highlight Layout (Flexbox for side-by-side) */
-.village-highlight {
-    background-color: #f4f7f4;
-    border-radius: 12px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.village-card-layout {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    padding: 40px;
-}
-
-.village-text {
-    flex: 1;
-}
-
-.village-text p {
-    color: #4a5568;
-    margin-bottom: 20px;
-}
-
-.village-img-placeholder {
-    flex: 1;
-}
-
-.village-img-placeholder img {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    object-fit: cover;
-    width: 100%;
-    height: 320px;
-}
-
-.text-link {
-    color: #1b5e20;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.text-link:hover {
-    color: #0b2d12;
-    text-decoration: underline;
-}
-
-/* ==========================================================================
-   5. FEATURES GRID SECTION (Zero JS Responsive Columns)
-   ========================================================================== */
-.features-section {
-    display: grid;
-    /* Automatically handles column wrapping cleanly based on device width */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding-top: 0;
-}
-
-.feature-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 30px;
-    position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.feature-card h3 {
-    font-size: 1.4rem;
-    color: #0b2d12;
-    margin-top: 15px;
-    margin-bottom: 12px;
-}
-
-.feature-card p {
-    color: #64748b;
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-}
-
-/* Badge tagging on the cards */
-.card-tag {
-    display: inline-block;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border-radius: 50px;
-    text-transform: uppercase;
-}
-
-.card-tag.personal {
-    background-color: #e1f5fe;
-    color: #0288d1;
-}
-
-.card-tag.village {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-}
-
-.card-tag.neutral {
-    background-color: #f1f5f9;
-    color: #475569;
-}
-
-/* ==========================================================================
-   6. FOOTER
-   ========================================================================== */
-footer {
-    background-color: #0b2d12;
-    color: #a3b899;
-    font-size: 0.9rem;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.footer-links a {
-    color: #ffffff;
-    margin: 0 5px;
-}
-
-.footer-links a:hover {
-    color: #c8e6c9;
-}
-
-/* ==========================================================================
-   7. RESPONSIVE MEDIA QUERIES (Mobile Adjustments)
-   ========================================================================== */
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
@@ -1177,205 +760,6 @@ footer {
     }
 }
 
-
-/* ==========================================================================
-   8. MOANA AI PREMIUM CARD STYLES
-   ========================================================================== */
-.moana-ad-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.moana-card {
-    background: linear-gradient(135deg, #0b2d12 0%, #164d1f 100%);
-    border-radius: 16px;
-    padding: 50px 40px;
-    color: #ffffff;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(11, 45, 18, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.moana-badge {
-    position: absolute;
-    top: 25px;
-    left: 40px;
-    background-color: #00E676; /* Vibrant tech green accent */
-    color: #0b2d12;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    border-radius: 50px;
-    letter-spacing: 1px;
-}
-
-.moana-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-top: 20px;
-}
-
-.moana-info {
-    flex: 1.4;
-}
-
-.moana-info h2 {
-    font-size: 2.6rem;
-    color: #ffffff;
-    margin-bottom: 5px;
-    letter-spacing: -0.5px;
-}
-
-.moana-tagline {
-    font-size: 1.2rem;
-    color: #a3e2b0;
-    margin-bottom: 35px;
-    font-weight: 500;
-}
-
-/* Feature List */
-.moana-features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-.moana-features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-}
-
-.moana-icon {
-    font-size: 1.5rem;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 10px;
-    border-radius: 12px;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.moana-features strong {
-    display: block;
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin-bottom: 4px;
-}
-
-.moana-features p {
-    color: #b2cbb6;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Premium Tech CTA Button */
-.btn-moana {
-    background-color: #ffffff;
-    color: #0b2d12;
-    padding: 14px 35px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 1rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    display: inline-block;
-    transition: all 0.2s ease;
-}
-
-.btn-moana:hover {
-    background-color: #00E676;
-    color: #0b2d12;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.3);
-}
-
-/* Decorative Visual Side Component */
-.moana-visual-side {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.ai-sphere-glow {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(0,230,118,0.3) 0%, rgba(0,0,0,0) 70%);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.tech-box {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 280px;
-    backdrop-filter: blur(5px);
-    z-index: 2;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.tech-box span {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #00E676;
-    font-weight: 700;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.tech-line {
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
-    margin-bottom: 10px;
-    width: 90%;
-}
-
-.tech-line.short {
-    width: 50%;
-    margin-bottom: 25px;
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.t-tag {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 4px 10px !important;
-    font-size: 0.75rem !important;
-    color: #e8f5e9 !important;
-    border-radius: 4px;
-    text-transform: none !important;
-    font-weight: 500 !important;
-}
-
-/* Responsive Scaling for Tablets and Mobile Phones */
-@media (max-width: 992px) {
-    .moana-content-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .moana-visual-side {
-        width: 100%;
-    }
-}
-
 @media (max-width: 576px) {
     .moana-card {
         padding: 60px 20px 30px 20px;
@@ -1399,235 +783,3 @@ footer {
         text-align: center;
     }
 }
-
-
-/* ==========================================================================
-   1. GLOBAL STYLES & RESET (If not already present in your main CSS)
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fcfdfc;
-    color: #222222;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
-.contact-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* Header spacing framing the layout neatly */
-.contact-header {
-    padding: 30px 0;
-    border-bottom: 1px solid #eaeaea;
-    background-color: #ffffff;
-    margin-bottom: 40px;
-}
-
-.nav-placeholder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #164d1f;
-    text-decoration: none;
-}
-
-.back-link {
-    color: #666666;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.back-link:hover {
-    color: #164d1f;
-}
-
-/* ==========================================================================
-   2. INTERACTIVE CONTACT LAYOUT
-   ========================================================================== */
-.contact-section {
-    padding-top: 20px;
-    padding-bottom: 80px;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: start;
-}
-
-/* Left side typography & style */
-.section-badge {
-    display: inline-block;
-    color: #164d1f;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.contact-info-side h2 {
-    font-size: 2.5rem;
-    color: #111111;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-}
-
-.contact-lead {
-    font-size: 1.1rem;
-    color: #555555;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-
-/* Contact information list items */
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    font-style: normal;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.info-icon {
-    font-size: 1.4rem;
-    background: #e8f5e9;
-    padding: 12px;
-    border-radius: 50%;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info-item strong {
-    display: block;
-    font-size: 1rem;
-    color: #111111;
-    margin-bottom: 4px;
-}
-
-.info-item p, .info-item a {
-    color: #666666;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.info-item a:hover {
-    color: #164d1f;
-}
-
-/* Right side form elements card */
-.contact-form-side {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    border: 1px solid #eaeaea;
-}
-
-.interactive-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-group label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333333;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 14px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    color: #222222;
-    background-color: #fafafa;
-    transition: all 0.2s ease;
-}
-
-/* Focus input glow ring */
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #164d1f;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(22, 77, 31, 0.1);
-}
-
-/* Form submission button */
-.btn-submit {
-    background-color: #164d1f;
-    color: #ffffff;
-    padding: 14px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.btn-submit:hover {
-    background-color: #0b2d12;
-    transform: translateY(-1px);
-    box-shadow: 0 5px 15px rgba(11, 45, 18, 0.2);
-}
-
-/* ==========================================================================
-   3. MOBILE RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
-@media (max-width: 992px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    
-    .contact-form-side {
-        padding: 30px 20px;
-    }
-    
-    .contact-info-side h2 {
-        font-size: 2.1rem;
-    }
-}
-
->>>>>>> 8fa3a9335005d8cb00f7267ac096ec179e8e5202
